@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'Modak';
+    src: url('./fonts/Modak.eot');
+    src: url('./fonts/Modak.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/Modak.woff2') format('woff2'),
+        url('./fonts/Modak.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mouse-Memoirs';
+    src: url('./fonts/MouseMemoirs-Regular.eot');
+    src: url('./fonts/MouseMemoirs-Regular?#iefix') format('embedded-opentype'),
+        url('./fonts/MouseMemoirs-Regular.woff2') format('woff2'),
+        url('./fonts/MouseMemoirs-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@layer base {
+    .row {
+        @apply flex flex-wrap
+    }
+
+    .center {
+        @apply justify-center items-center
+    }
+}
+
+@layer components {}
+
+@layer utilities {
+    .text-stroke-light {
+        -webkit-text-stroke: 2px white;
+    }
+
+    @media (min-width: 1024px) {
+        .text-stroke-light {
+            -webkit-text-stroke: 10px white;
+        }
+    }
+
+    .text-stroke-lightest {
+        -webkit-text-stroke: 2px white;
+    }
+
+    @media (min-width : 1024) {
+        .text-stroke-lightest {
+            -webkit-text-stroke: 5px white;
+        }
+    }
+
+}
+
+@theme {
+    --color-beige: #f5e3cd;
+    --color-myRed: #f91814;
+    --color-myWhite: #fff;
+    --color-myBlack: #1b1b1b;
+    --color-mustard: #ffd750;
+    --color-mustard-dark: #f4a804;
+
+    --font-modak: "Modak";
+    --font-Mouse: "Mouse-Memoirs";
+
+}
+
+@keyframes upAndDownHamburger {
+    to {
+        transform: translateY(30px);
+    }
+
+}

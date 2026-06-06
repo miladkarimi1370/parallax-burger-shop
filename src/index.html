@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger Project</title>
+    <link rel="stylesheet" href="style/output.css">
+</head>
+
+<body>
+    <main class="bg-beige w-full ">
+        <!-- header menu -->
+        <section class="row h-24 sm:h-36  justify-between items-center *:px-5 *:sm:px-8 ">
+            <h3 class="text-myRed text-5xl sm:text-6xl lg:text-7xl uppercase font-modak hover:scale-105 duration-300">
+                crav</h3>
+            <div class="flex justify-center items-center gap-3 ">
+                <div
+                    class=" relative group bg-myRed border-myRed border-2 overflow-hidden rounded-4xl cursor-pointer hover:bg-myBlack hover:border-myBlack duration-300 hover:scale-105">
+                    <button
+                        class="   text-myWhite font-Mouse text-xl sm:text-2xl border-0  px-6 py-3 uppercase  hover:scale-105 duration-300 group-hover:translate-y-[-100%]">burgers</button>
+                    <button
+                        class="text-myWhite font-Mouse text-xl sm:text-2xl border-0  px-6 py-3 uppercase cursor-pointer hover:scale-105 duration-300  absolute top-[100%] left-0 group-hover:translate-y-[-100%]">
+                        burgers
+                    </button>
+                </div>
+                <div
+                    class="hover:scale-105 hover:border-myBlack duration-300  border-gray-400  border-2 rounded-4xl relative group flex justify-around items-center overflow-hidden">
+                    <button
+                        class=" font-Mouse text-xl sm:text-2xl pl-4 pr-2 py-3 flex justify-center items-center uppercase duration-300 cursor-pointer group-hover:translate-y-[-100%]   ">menu
+                    </button>
+                    <div class=" pr-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+                            class="w-8" stroke="currentColor" className="size-6">
+                            <path strokeLinecap="round" strokeLinejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12H12m-8.25 5.25h16.5" />
+                        </svg>
+                    </div>
+                    <button
+                        class="font-Mouse text-xl sm:text-2xl pl-4 pr-2 py-3 flex justify-center items-center uppercase cursor-pointer hover:scale-105 duration-300  absolute top-[100%] left-0 group-hover:translate-y-[-100%]">menu</button>
+                </div>
+
+            </div>
+        </section>
+        <!-- header menu -->
+        <!-- the title and hamburger picture that has animation -->
+        <section 
+        class="w-full mt-20 lg:mt-0 lg:-translate-y-30 pointer-events-none row center relative">
+            <div
+                class=" *:font-Mouse *:uppercase flex justify-center items-center lg:items-start gap-x-5 w-23/24 lg:w-21/24">
+                <div class="relative w-full ">
+                    <h3 class=" text-[30vw]  text-myRed  text-stroke-light  font-extralight">the</h3>
+                    <h6
+                        class="absolute text-mustard-dark font-modak text-[6vw] text-stroke-lightest  text-center tracking-tighter lg:tracking-wide leading-5 md:leading-10 lg:leading-20 top-[50%] translate-y-[-100%]">
+                        smashed fresh</h6>
+                </div>
+                <div class="relative w-full">
+                    <h3 class="text-[30vw] text-myRed text-stroke-light  font-extralight">burger</h3>
+                    <h6
+                        class="absolute text-mustard-dark font-modak text-[6vw] text-stroke-lightest text-center tracking-tighter lg:tracking-wide leading-5 md:leading-10 lg:leading-20 w-1/2 top-2/4 left-6/12">
+                        bold flavor</h6>
+                </div>
+
+            </div>
+
+            <figure class="w-10/12 lg:w-5/12  lg:absolute lg:top-1/2 xl:top-1/6 left-1/2 lg:-translate-x-1/2">
+                <img src="style/imgs/burgerH.webp"
+                    class="w-full h-full object-cover animate-[upAndDownHamburger_3s_ease-in-out_infinite_alternate]"
+                    alt="">
+                <figcaption class="hidden lg:block w-full  text-mustard-dark font-modak text-[28vw] lg:text-[20vw] z-50 text-center  text-stroke-light tracking-wide lg:tracking-wide leading-5 md:leading-10 lg:leading-20 w-1/2 top-2/4 left-6/12
+                lg:absolute lg:top-11/12 lg:top-[120%] left-1/2 lg:-translate-x-1/2
+                ">
+                    crav
+                </figcaption>
+            </figure>
+
+            <h1 class="w-full block lg:hidden  text-mustard-dark font-modak text-[28vw] lg:text-[20vw] z-40 text-center  text-stroke-light tracking-wide lg:tracking-wide leading-5 md:leading-10 lg:leading-20 w-1/2 top-2/4 left-6/12
+                lg:absolute lg:top-2/4 left-1/2 lg:-translate-x-1/2
+                ">
+                crav
+            </h1>
+
+        </section>
+        <!-- the title and hamburger picture that has animation -->
+        <!-- the title of black paragraph -->
+        <section class="w-full  *:font-Mouse  mt-30 *:text-center row center xl:translate-y-[-250%]">
+            <div class="w-10/12 xl:w-11/12 text-[5vw] *:leading-6 *:md:leading-tight *:my-4 lg:flex *:lg:w-1/6 *:xl:w-1/4 *:lg:text-[1.8vw] lg:justify-between lg:items-start ">
+                <p class="capitalize xl:text-start">smashed hot on the top. out prime patties lock in ultimate juiciness under a caramelized crust .</p>
+                <p class="capitalize xl:text-end ">topped with melted chaddar and our signature chili honey glaze crafted to satisfy your cravings since
+                    1997 .</p>
+            </div>
+        </section>
+        <!-- the title of black paragraph -->
+    </main>
+</body>
+
+</html>
