@@ -23,12 +23,17 @@
 }
 
 @layer base {
+
     .row {
         @apply flex flex-wrap
     }
 
     .center {
         @apply justify-center items-center
+    }
+
+    body {
+        scroll-behavior: smooth;
     }
 }
 
@@ -53,6 +58,45 @@
         .text-stroke-lightest {
             -webkit-text-stroke: 5px white;
         }
+    }
+
+    /* ////////////////////////// style for sticker ///////////// */
+    .sticker-container {
+        perspective: 1000px;
+    }
+
+    .sticker {
+        opacity: 0;
+        transform: rotateX(70deg) rotateZ(-30deg) scale(1.5) translateZ(200px);
+        transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.5s ease;
+
+    }
+
+
+    .sticker.is-stuck {
+        opacity: 1;
+        transform: rotateX(0deg) rotateZ(0deg) scale(1) translateZ(0px);
+    }
+
+    /* ////////////////////////// style for sticker ///////////// */
+
+
+    #stickerBurger,
+    #stickerFires {
+        transition: filter 0.4s ease;
+        will-change: transform, box-shadow;
+    }
+
+    #stickerBurger.is-stuck,
+    #stickerFires.is-stuck {
+        z-index: 30;
+        cursor: grab;
+    }
+
+    /* افکت خمیدگی ملایم */
+    #stickerBurger.is-stuck img,
+    #stickerFires.is-stuck img {
+        filter: drop-shadow(12px 18px 12px rgba(0, 0, 0, 0.3));
     }
 
 }

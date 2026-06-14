@@ -5,13 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Burger Project</title>
+
     <link rel="stylesheet" href="style/output.css">
 </head>
 
-<body>
-    <main class="bg-beige w-full ">
+<body class="min-h-[2000vh] bg-beige">
+    <main class="bg-beige w-full">
         <!-- header menu -->
-        <section class="row h-24 sm:h-36  justify-between items-center *:px-5 *:sm:px-8 ">
+        <section
+            class="row h-24 sm:h-36  justify-between items-center *:px-5 *:sm:px-8 fixed  top-0 left-0 w-full bg-beige"
+            id="header">
             <h3 class="text-myRed text-5xl sm:text-6xl lg:text-7xl uppercase font-modak hover:scale-105 duration-300">
                 crav</h3>
             <div class="flex justify-center items-center gap-3 ">
@@ -44,8 +47,9 @@
         </section>
         <!-- header menu -->
         <!-- the title and hamburger picture that has animation -->
-        <section 
-        class="w-full mt-20 lg:mt-0 lg:-translate-y-30 pointer-events-none row center relative">
+        <section
+            class="w-full  mt-20 lg:mt-15 xl:mt-0 translate-y-15  xl:translate-y-0  pointer-events-none row center  fixed "
+            id="theBurgerTitle">
             <div
                 class=" *:font-Mouse *:uppercase flex justify-center items-center lg:items-start gap-x-5 w-23/24 lg:w-21/24">
                 <div class="relative w-full ">
@@ -57,7 +61,7 @@
                 <div class="relative w-full">
                     <h3 class="text-[30vw] text-myRed text-stroke-light  font-extralight">burger</h3>
                     <h6
-                        class="absolute text-mustard-dark font-modak text-[6vw] text-stroke-lightest text-center tracking-tighter lg:tracking-wide leading-5 md:leading-10 lg:leading-20 w-1/2 top-2/4 left-6/12">
+                        class="absolute text-mustard-dark font-modak text-[6vw] text-stroke-lightest text-center tracking-tighter lg:tracking-wide leading-5 md:leading-30 lg:leading-34 w-1/2 top-2/4 md:top-1/4 left-6/12">
                         bold flavor</h6>
                 </div>
 
@@ -67,31 +71,223 @@
                 <img src="style/imgs/burgerH.webp"
                     class="w-full h-full object-cover animate-[upAndDownHamburger_3s_ease-in-out_infinite_alternate]"
                     alt="">
-                <figcaption class="hidden lg:block w-full  text-mustard-dark font-modak text-[28vw] lg:text-[20vw] z-50 text-center  text-stroke-light tracking-wide lg:tracking-wide leading-5 md:leading-10 lg:leading-20 w-1/2 top-2/4 left-6/12
-                lg:absolute lg:top-11/12 lg:top-[120%] left-1/2 lg:-translate-x-1/2
+                <figcaption class="hidden lg:block w-full  italic  text-mustard-dark font-modak text-[28vw] lg:text-[15vw] z-50 text-center  text-stroke-light tracking-wide lg:tracking-wide leading-5 md:leading-10 lg:leading-20 
+                lg:absolute 
                 ">
                     crav
                 </figcaption>
             </figure>
 
-            <h1 class="w-full block lg:hidden  text-mustard-dark font-modak text-[28vw] lg:text-[20vw] z-40 text-center  text-stroke-light tracking-wide lg:tracking-wide leading-5 md:leading-10 lg:leading-20 w-1/2 top-2/4 left-6/12
-                lg:absolute lg:top-2/4 left-1/2 lg:-translate-x-1/2
-                ">
+            <h1
+                class="w-full absolute lg:hidden -bottom-6 z-50  text-mustard-dark  font-modak text-[28vw]  left-0 lg:text-[15vw]  text-center  text-stroke-light tracking-wide lg:tracking-wide leading-5 md:leading-10 lg:leading-20">
                 crav
             </h1>
 
         </section>
         <!-- the title and hamburger picture that has animation -->
         <!-- the title of black paragraph -->
-        <section class="w-full  *:font-Mouse  mt-30 *:text-center row center xl:translate-y-[-250%]">
-            <div class="w-10/12 xl:w-11/12 text-[5vw] *:leading-6 *:md:leading-tight *:my-4 lg:flex *:lg:w-1/6 *:xl:w-1/4 *:lg:text-[1.8vw] lg:justify-between lg:items-start ">
-                <p class="capitalize xl:text-start">smashed hot on the top. out prime patties lock in ultimate juiciness under a caramelized crust .</p>
-                <p class="capitalize xl:text-end ">topped with melted chaddar and our signature chili honey glaze crafted to satisfy your cravings since
+        <section class="w-full  *:font-Mouse   *:text-center row center mt-210  md:mt-300 lg:mt-210 fixed "
+            id="paragraphUnderTheBurger">
+            <div
+                class=" w-10/12 xl:w-11/12 text-[5vw] *:sm:leading-6 *:md:leading-14 *:lg:leading-10 *:my-4 lg:flex *:lg:w-1/6 *:xl:w-1/4 *:lg:text-[1.8vw] lg:justify-between lg:items-start ">
+                <p class="capitalize xl:text-start">smashed hot on the top. out prime patties lock in ultimate juiciness
+                    under a caramelized crust .</p>
+                <p class="capitalize xl:text-end ">topped with melted chaddar and our signature chili honey glaze
+                    crafted to satisfy your cravings since
                     1997 .</p>
             </div>
         </section>
         <!-- the title of black paragraph -->
+
+        <!-- the part of top classic -->
+        <section class="w-full   fixed mt-280 md:mt-380 lg:mt-300 *:text-center row center " id="top-classic">
+            <h5
+                class="font-modak text-[10vw] lg:text-[5vw] text-myRed text-stroke-lightest tracking-tighter  w-full lg:-rotate-6">
+                top classic</h5>
+            <h3
+                class="w-full lg:w-6/12  md:leading-44  font-Mouse uppercase text-[26vw] md:text-[22vw] lg:text-[12vw]  text-myRed text-stroke-light  leading-30 ">
+                juicy cheesy fully loaded</h3>
+            <p
+                class="font-Mouse text-[5vw] lg:text-[3vw] mt-8 w-10/12  text-center md:leading-tight lg:row  lg:flex lg:justify-center">
+                <span class="lg:w-6/12 flex text-center lg:text-[2vw]">Crav is back and bolder than ever . honoring our
+                    rich roots . we bring you the ultimate smashed
+                    experience fully loaded . and crafted fresh .</span>
+            </p>
+        </section>
+        <!-- the part of top classic -->
+        <!-- ordernow button and three pictures part -->
+        <section class="w-full fixed  mt-430 md:mt-540 lg:mt-430 xl:mt-470 lg:flex lg:justify-center"
+            id="orderButtonAndThreePictures">
+            <div class="relative w-full lg:w-8/12 xl:w-6/12">
+                <a class="relative w-fit  mx-auto border-none mt-10  p-0 block cursor-pointer outline-none select-none "
+                    data-anm-btn="btn" data-wf--btn-blob--variant="secondary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="-10 -10 602 475"
+                        preserveAspectRatio="none" data-anm-btn="svg"
+                        class="absolute inset-0 w-full h-full z-0 pointer-events-none">
+                        <path stroke="#ffffff" stroke-width="10" fill="#F91914"
+                            d="M310.777 0.20434C424.154 2.91791 540.733 50.9739 574.176 159.34C606.479 264.014 533.962 365.999 442.064 425.623C364.995 475.626 270.863 455.893 193.524 406.309C93.8313 342.395 -27.3608 259.503 5.48889 145.729C40.0621 25.9857 186.179 -2.77783 310.777 0.20434Z"
+                            data-anm-btn="path" class="transition-[fill] duration-200"
+                            data-original="M310.777 0.20434C424.154 2.91791 540.733 50.9739 574.176 159.34C606.479 264.014 533.962 365.999 442.064 425.623C364.995 475.626 270.863 455.893 193.524 406.309C93.8313 342.395 -27.3608 259.503 5.48889 145.729C40.0621 25.9857 186.179 -2.77783 310.777 0.20434Z">
+                        </path>
+                    </svg>
+                    <span data-anm-btn="text"
+                        class="font-Mouse relative z-10 text-white font-bold text-[5vw] lg:text-[2vw] uppercase inline-block px-[4vw] py-[1.5vw] max-md:px-[10vw] max-md:py-[4vw] "
+                        aria-hidden="false">Order Now</span>
+                </a>
+
+                <div class=" w-full row center mt-20">
+                    <div class="flex  *:w-4/12 **:w-full **:rounded-xl *:perspective-midrange *:rotate-x-[-30deg] cursor-pointer *:duration-300"
+                        id="parentOfThreeImgs">
+                        <figure class="-translate-x-10 -rotate-z-12 orderNow"><img src="style/imgs/about-1.webp" alt="">
+                        </figure>
+                        <figure class="scale-110 orderNow"><img src="style/imgs/about-2.webp" alt=""></figure>
+                        <figure class="translate-x-10 rotate-z-12 orderNow"><img src="style/imgs/about-3.webp" alt="">
+                        </figure>
+                    </div>
+
+                </div>
+                <figure
+                    class="absolute w-[26vw] lg:w-[14vw]  -top-5 left-5 xl:-top-5 xl:-left-52 rotate-z-45 sticker-container">
+                    <img src="style/imgs/burgerselfie.png" class="w-full h-full sticker" id="sticker" alt="">
+                </figure>
+            </div>
+
+        </section>
+
+        <!-- ordernow button and three pictures part -->
+
+        <!-- food that feels good part  -->
+
+        <section class="w-full bg-myRed fixed mt-590 md:mt-740 lg:mt-650 xl:mt-680 2xl:mt-740" id="foodThatFeelsGood">
+            <div class="w-full absolute top-0 left-0 translate-y-[-98%]">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <path class="duration-[5s]" fill="#f91814" fill-opacity="1" id="waveAbove"
+                        d="M0,0L40,26.7C80,53,160,107,240,122.7C320,139,400,117,480,122.7C560,128,640,160,720,144C800,128,880,64,960,53.3C1040,43,1120,85,1200,112C1280,139,1360,149,1400,154.7L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z">
+                    </path>
+                </svg>
+            </div>
+            <div class="w-full relative">
+                <h5 class="font-modak text-[8vw] text-myRed text-stroke-light uppercase w-full  text-center mt-20">
+                    experience</h5>
+                <h3
+                    class=" *:font-Mouse *:uppercase *:text-beige *:text-[25vw] *:lg:text-[16vw] *:lg:flex *:lg:flex-col **:mx-2.5 row center *:leading-24 *:md:leading-44 *:lg:leading-42 *:xl:leading-50 *:2xl:leading-58">
+                    <div class="">
+                        <span>food</span><span>that</span>
+                    </div>
+                    <div class="">
+                        <span>feels</span><span>good</span>
+                    </div>
+
+                </h3>
+                <figure class="absolute w-[34vw] md:w-[18vw] top-38 -right-4 md:right-8 rotate-z-45" id="stickerBurger">
+                    <img class="" src="style/imgs/burger.webp" alt="">
+                </figure>
+                <figure class="absolute w-[24vw] md:w-[16vw] top-38 -left-4 md:left-8 rotate-z-12" id="stickerFires">
+                    <img src="style/imgs/fries.webp" alt="">
+                </figure>
+                <!-- the picture of burger with eyes /////////////////// -->
+                <figure class="mt-18 relative  ">
+                    <img class="mx-auto w-11/12 md:w-10/12 lg:w-8/12 xl:w-9/12 object-cover"
+                        src="style/imgs/burgerwithhands.webp" alt="">
+
+
+                    <!-- eyebrow //////// -->
+                    <div
+                        class="w-[16vw] absolute top-1  left-1/4  lg:translate-x-8 xl:translate-x-12  2xl:translate-x-14">
+                        <svg width="100%" viewBox="0 0 182 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.2666 74.5742C7.2666 74.5742 45.7896 11.0167 85.7666 8.57418C128.957 5.93536 174.767 74.5742 174.767 74.5742"
+                                stroke="white" stroke-width="17"></path>
+                        </svg>
+                    </div>
+                    <div
+                        class="w-[16vw] absolute top-1 right-1/4 lg:-translate-x-8 xl:-translate-x-12 2xl:-translate-x-14">
+                        <svg width="100%" viewBox="0 0 182 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.2666 74.5742C7.2666 74.5742 45.7896 11.0167 85.7666 8.57418C128.957 5.93536 174.767 74.5742 174.767 74.5742"
+                                stroke="white" stroke-width="17"></path>
+                        </svg>
+                    </div>
+                    <!-- eyebrow //////// -->
+                    <!-- eyes///////////// -->
+                    <div class="absolute w-[10vw]  h-[15vw] md:w-[7vw] md:h-[10vw]  top-10 left-1/3 p-1">
+                        <div class="bg-myWhite w-full h-full rounded-t-[50%] rounded-b-[50%] relative ">
+                            <div
+                                class=" bg-myBlack w-[4vw] h-[7vw] md:w-[3vw] md:h-[5vw]   rounded-t-[50%] rounded-b-[50%] absolute ">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute w-[10vw]  h-[15vw]  md:w-[7vw] md:h-[10vw] top-10 right-1/3 p-1">
+                        <div class="bg-myWhite w-full h-full rounded-t-[50%] rounded-b-[50%] relative ">
+                            <div
+                                class=" bg-myBlack w-[4vw] h-[7vw] md:w-[3vw] md:h-[5vw]   rounded-t-[50%] rounded-b-[50%] absolute ">
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- eyes///////////// -->
+
+
+
+
+
+                </figure>
+
+                <!-- the picture of burger with eyes /////////////////// -->
+                <h5
+                    class="absolute text-mustard-dark font-modak text-[6vw] text-stroke-lightest  bottom-32 md:bottom-64 lg:bottom-72 xl:bottom-96 2xl:bottom-102 right-10 rotate-z-12 flex flex-col justify-center items-center leading-8 lg:leading-12 xl:leading-18 uppercase">
+                    <span>bold</span> <span>flavour</span>
+                </h5>
+                <div
+                    class="*:font-Mouse *:text-beige text-[5vw] lg:text-[3vw] xl:text-[2vw]  flex justify-between items-center w-full  *:flex *:flex-col **:uppercase *:px-4 lg:px-10 lg:-translate-y-20">
+                    <p>
+                        <span>450 kcl</span><span>high protein</span><span>fresh ingredients</span>
+                    </p>
+                    <p class="text-end">
+                        <span>100% organic</span><span>zero guili</span><span>true taste</span>
+                    </p>
+                </div>
+
+            </div>
+            <div class="w-full absolute bottom-0 left-0 translate-y-[98%]">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <path class="duration-[5s]" fill="#f91814" fill-opacity="1" id="waveUnder"
+                        d="M0,160L40,160C80,160,160,160,240,176C320,192,400,224,480,224C560,224,640,192,720,181.3C800,171,880,181,960,192C1040,203,1120,213,1200,218.7C1280,224,1360,224,1400,224L1440,224L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z">
+                    </path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- food that feels good part  -->
+
+
+
     </main>
+
+
+
+
+
+
+
+
+
+
+
+    <script type="importmap">
+{
+  "imports": {
+    "lenis": "https://unpkg.com/lenis@1.3.23/dist/lenis.mjs"
+  }
+}
+</script>
+
+    <script type="module" src="js/logic.js"></script>
+    <script type="module" src="js/movePosters.js"></script>
+
+    <script src="js/waveAnimation.js"></script>
+    <script src="js/hoverForOrderButton.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
 </body>
 
 </html>
