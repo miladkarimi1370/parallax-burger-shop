@@ -1,7 +1,10 @@
 
 import Lenis from "lenis"; // حالا کار می‌کنه
 import { MovePosters } from "./movePosters.js";
-import { StickerForTwoFries } from "./sticker.js";
+import { movePlane } from "./movePlane.js";
+import { AppearenceCartForAirPlanePart } from "./appearenceCartForAirPlanePart.js";
+
+
 
 
 
@@ -11,8 +14,17 @@ const paragraphUnderTheBurger = document.querySelector("#paragraphUnderTheBurger
 const TopClassicTitle = document.querySelector("#top-classic");
 const foodThatFeelsGood = document.querySelector("#foodThatFeelsGood");
 const stickerPng = document.querySelector("#sticker");
-
 const orderPostersOfOrderNow = document.querySelectorAll(".orderNow")
+const justCheesBurgerBackground = document.querySelector("#justCheesBurgerBackground");
+const pureQuelity = document.querySelector("#pureQuelity")
+const fourMaterial = document.querySelector("#fourMaterial");
+const goldPartWithAirplane = document.querySelector("#goldPartWithAirplane");
+
+
+
+
+
+
 
 const claculateSpeedOfScroll = (atLeast, scrolly, percentage, section) => {
 
@@ -43,16 +55,18 @@ lenis.on("scroll", ({ scroll }) => {
 
 
 
+
+
     claculateSpeedOfScroll(20, scroll, 3, myHeader);
     claculateSpeedOfScroll(20, scroll, 2, theBurgerTitle)
     claculateSpeedOfScroll(20, scroll, 2, paragraphUnderTheBurger);
     claculateSpeedOfScroll(20, scroll, 2, TopClassicTitle);
     claculateSpeedOfScroll(20, scroll, 2, orderButtonAndThreePictures);
     claculateSpeedOfScroll(20, scroll, 2, foodThatFeelsGood);
-
-
-
-
+    claculateSpeedOfScroll(20, scroll, 2, justCheesBurgerBackground);
+    claculateSpeedOfScroll(20, scroll, 2, pureQuelity)
+    claculateSpeedOfScroll(20, scroll, 1.5, fourMaterial);
+    claculateSpeedOfScroll(20, scroll, 2, goldPartWithAirplane);
 
     // sticker png functionality //////////////////////
     if (scroll > 2850) {
@@ -64,14 +78,16 @@ lenis.on("scroll", ({ scroll }) => {
 
     // sticker png functionality //////////////////////
 
+    // move plane to the page ////////////////////
+    movePlane(scroll);
+    // move plane to page ///////////////////////
 
-    // sticker for two fires walking functionality //////////////
-    StickerForTwoFries(scroll);
 
 
+    // appearance Cart For Airplane part
 
-    // sticker for two fires walking functionality //////////////
-
+    AppearenceCartForAirPlanePart(scroll)
+    // appearance Cart For Airplane part
 
 
     // scroll control for move three pictures with mouse movement//////////////////////
@@ -81,7 +97,6 @@ lenis.on("scroll", ({ scroll }) => {
         return
     }
     // scroll control for move three pictures with mouse movement//////////////////////
-
 
 
 })

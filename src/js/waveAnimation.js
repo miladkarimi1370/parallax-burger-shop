@@ -1,6 +1,7 @@
 const waveAbove = document.querySelector("#waveAbove");
 const waveUnder = document.querySelector("#waveUnder");
-
+const waveAbovePureQuality = document.querySelector("#waveAbovePureQuality");
+const waveUnderForGoldPartOrAirPlanePart = document.querySelector("#waveUnderForGoldPartOrAirPlanePart");
 
 
 
@@ -16,22 +17,26 @@ const keyFramesUnder = [
 ]
 
 function randomNumber() {
-    
-    let n = Math.round(Math.random() * 10) % 2 ;
 
-    if(n == 0) {
-        waveAbove.setAttribute("d" , keyFramesAbove[n]);
-        waveUnder.setAttribute("d" , keyFramesUnder[n])
-    }else {
-        waveAbove.setAttribute("d" , keyFramesAbove[n]);
-        waveUnder.setAttribute("d" , keyFramesUnder[n]);
+    let n = Math.round(Math.random() * 10) % 2;
+
+    if (n == 0) {
+        waveAbove.setAttribute("d", keyFramesAbove[n]);
+        waveUnder.setAttribute("d", keyFramesUnder[n]);
+        waveAbovePureQuality.setAttribute("d", keyFramesAbove[n]);
+        waveUnderForGoldPartOrAirPlanePart.setAttribute("d" , keyFramesUnder[n]);
+    } else {
+        waveAbove.setAttribute("d", keyFramesAbove[n]);
+        waveUnder.setAttribute("d", keyFramesUnder[n]);
+        waveAbovePureQuality.setAttribute("d", keyFramesAbove[n]);
+        waveUnderForGoldPartOrAirPlanePart.setAttribute("d" , keyFramesUnder[0]);
     }
 
-   let r = setInterval(() => {
-      clearInterval(r)
+    let r = setInterval(() => {
+        clearInterval(r)
         randomNumber();
-    } , 5000)
-      
+    }, 5000)
+
 }
 
 randomNumber();

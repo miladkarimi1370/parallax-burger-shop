@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style/output.css">
 </head>
 
-<body class="min-h-[2000vh] bg-beige">
+<body class="min-h-[3000vh] bg-beige">
     <main class="bg-beige w-full">
         <!-- header menu -->
         <section
@@ -158,7 +158,8 @@
 
         <!-- food that feels good part  -->
 
-        <section class="w-full bg-myRed fixed mt-590 md:mt-740 lg:mt-650 xl:mt-680 2xl:mt-740" id="foodThatFeelsGood">
+        <section class=" w-full bg-myRed fixed mt-590 md:mt-740 lg:mt-650 xl:mt-680 2xl:mt-740 z-50"
+            id="foodThatFeelsGood">
             <div class="w-full absolute top-0 left-0 translate-y-[-98%]">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                     <path class="duration-[5s]" fill="#f91814" fill-opacity="1" id="waveAbove"
@@ -179,11 +180,32 @@
                     </div>
 
                 </h3>
-                <figure class="absolute w-[34vw] md:w-[18vw] top-38 -right-4 md:right-8 rotate-z-45" id="stickerBurger">
-                    <img class="" src="style/imgs/burger.webp" alt="">
+
+
+                <!-- جایگزین stickerBurger فعلی -->
+                <!-- Sticker Burger -->
+                <figure
+                    class="sticker-wrapper absolute w-[34vw] md:w-[18vw] flex -top-10  -right-4 md:right-10 rotate-z-45 z-50">
+                    <div class="wrapper">
+                        <span class="sticker">
+                            <span class="front">
+                                <img src="style/imgs/burger.webp" alt="">
+                            </span>
+                            <span class="back"></span>
+                        </span>
+                    </div>
                 </figure>
-                <figure class="absolute w-[24vw] md:w-[16vw] top-38 -left-4 md:left-8 rotate-z-12" id="stickerFires">
-                    <img src="style/imgs/fries.webp" alt="">
+
+                <figure
+                    class="sticker-wrapper absolute w-[34vw] md:w-[18vw] flex -top-20 -left-4 md:left-20 rotate-z-45 z-50">
+                    <div class="wrapper">
+                        <span class="sticker">
+                            <span class="front">
+                                <img src="style/imgs/fries.webp" alt="">
+                            </span>
+                            <span class="back"></span>
+                        </span>
+                    </div>
                 </figure>
                 <!-- the picture of burger with eyes /////////////////// -->
                 <figure class="mt-18 relative  ">
@@ -212,15 +234,17 @@
                     <!-- eyes///////////// -->
                     <div class="absolute w-[10vw]  h-[15vw] md:w-[7vw] md:h-[10vw]  top-10 left-1/3 p-1">
                         <div class="bg-myWhite w-full h-full rounded-t-[50%] rounded-b-[50%] relative ">
-                            <div
-                                class=" bg-myBlack w-[4vw] h-[7vw] md:w-[3vw] md:h-[5vw]   rounded-t-[50%] rounded-b-[50%] absolute ">
+                            <div class=" bg-myBlack w-[4vw] h-[7vw] md:w-[3vw] md:h-[5vw]   rounded-t-[50%] rounded-b-[50%] absolute 
+                          
+                                " id="leftEyes">
                             </div>
                         </div>
                     </div>
                     <div class="absolute w-[10vw]  h-[15vw]  md:w-[7vw] md:h-[10vw] top-10 right-1/3 p-1">
                         <div class="bg-myWhite w-full h-full rounded-t-[50%] rounded-b-[50%] relative ">
-                            <div
-                                class=" bg-myBlack w-[4vw] h-[7vw] md:w-[3vw] md:h-[5vw]   rounded-t-[50%] rounded-b-[50%] absolute ">
+                            <div class=" bg-myBlack w-[4vw] h-[7vw] md:w-[3vw] md:h-[5vw]   rounded-t-[50%] rounded-b-[50%] absolute 
+                         
+                                " id="rightEyes">
                             </div>
 
                         </div>
@@ -259,8 +283,204 @@
         </section>
 
         <!-- food that feels good part  -->
+        <!-- just cheesyBurger background part -->
+        <section class="w-full  fixed min-h-96 md:min-h-135 lg:min-h-[90vh] xl:min-h-[110vh] 2xl:min-h-[160vh] mt-820 md:mt-1040 lg:mt-950 xl:mt-1060 2xl:mt-1190  scale-150  md:scale-100
+    
+    bg-cover bg-center bg-no-repeat" id="justCheesBurgerBackground"
+            style="background-image: url(./style/imgs/cheesyBurger.webp);">
+
+        </section>
+        <!-- just cheesyBurger background part -->
+        <!-- pure quality part  -->
+
+        <section class="w-full   mt-940 md:mt-1200 lg:mt-1250 xl:mt-1300 2xl:mt-1550 fixed z-50 pb-70 "
+            id="pureQuelity">
+            <!-- wave part -->
+            <div
+                class="w-full absolute top-0 left-0 translate-y-[-98%] md:translate-y-[-130%] lg:translate-y-[-240%] xl:translate-y-[-95%]">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <path class="duration-[5s]" fill="#f5e3cd" fill-opacity="1" id="waveAbovePureQuality"
+                        d="M0,0L40,26.7C80,53,160,107,240,122.7C320,139,400,117,480,122.7C560,128,640,160,720,144C800,128,880,64,960,53.3C1040,43,1120,85,1200,112C1280,139,1360,149,1400,154.7L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z">
+                    </path>
+                </svg>
+            </div>
+            <!-- wave part -->
+            <h5
+                class="font-modak text-myRed text-stroke-lightest  text-[8vw] lg:text-[5vw] uppercase  w-full text-center row center mt-10">
+                pure quality</h5>
+            <div
+                class="font-Mouse text-myRed text-stroke-light  text-[25vw] lg:text-[18vw] xl:text-[15vw] w-full lg:w-10/12 lg:mx-auto *:text-center uppercase flex justify-center flex-col items-center  leading-26 md:leading-42 xl:leading-52 2xl:leading-62 relative">
+                <span>every layer</span>
+                <span>picked with</span>
+                <span>signature</span>
+                <span>flavour</span>
+
+            </div>
+
+        </section>
+
+        <!-- pure quality part  -->
+
+        <!-- four material lettuce tomato cheese meat part -->
+        <section class="fixed  mt-1250 md:mt-1650 lg:mt-1700 xl:mt-1800 2xl:mt-2150 z-60 " id="fourMaterial">
+            <div
+                class=" relative top-0 left-0 w-full h-[40vh]  *:w-[30vw]  lg:w-10/12 lg:left-[100%]  xl:left-[150%]   *:lg:w-[20vw] *:xl:w-[17vw] ">
+                <div class="invisible"> .</div>
+                <figure class="absolute top-0    left-[2%]"><img src="style/imgs/lettuce.webp" alt=""></figure>
+                <figure class="absolute top-0   left-[200%]"><img src="style/imgs/tomato.webp" alt=""></figure>
+                <figure class="absolute top-[70%]   md:top-[85%] lg:top-[120%] left-[2%]"><img
+                        src="style/imgs/cheese.webp" alt=""></figure>
+                <figure class="absolute top-[85%]   md:top-[95%] lg:top-[135%] left-[200%]"><img
+                        src="style/imgs/meat.webp" alt=""></figure>
+            </div>
+        </section>
 
 
+        <!-- four material lettuce tomato cheese meat part -->
+
+        <!-- a part with gold background that airplane flying  -->
+        <section class="bg-mustard w-full min-h-96 fixed mt-1100 md:mt-1480 lg:mt-1540 xl:mt-1630 2xl:mt-1950 z-50"
+            id="goldPartWithAirplane">
+            <div class="w-full absolute top-0 left-0 translate-y-[-98%]">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <path class="duration-[5s]" fill="#ffd750" fill-opacity="1" id="waveAbove"
+                        d="M0,0L40,26.7C80,53,160,107,240,122.7C320,139,400,117,480,122.7C560,128,640,160,720,144C800,128,880,64,960,53.3C1040,43,1120,85,1200,112C1280,139,1360,149,1400,154.7L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z">
+                    </path>
+                </svg>
+            </div>
+            <h5 class="w-full  *:font-Mouse text-[25vw] md:text-[22vw] lg:text-[15vw] lg:pl-8 text-center lg:text-start   text-stroke-gold uppercase flex flex-col text-myWhite leading-30 2xl:leading-62 md:leading-46"
+                id="wrapperOfTitle">
+                <span> </span>
+                <span></span>
+            </h5>
+            <p class="text-myBlack  w-full text-center lg:text-start font-Mouse text-[5vw] lg:text-[2vw] md:mt-10 lg:mt-0 2xl:mt-20  flex flex-col leading-8 md:leading-14 lg:leading-6 2xl:leading-10 lg:pl-8"
+                id="wrapperOfParagraphOfTitle">
+                <span></span>
+                <span> </span>
+                <span></span>
+            </p>
+
+            <!-- start cart part -->
+            <div class="relative  h-auto lg:h-[100vh] lg:static" id="pathParent">
+                <!-- pedesterain path  -->
+                <div class="absolute inset-0 pointer-events-none lg:hidden ">
+                    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="50%" y1="0" x2="50%" y2="100%" stroke="#D4A017" stroke-width="8"
+                            stroke-dasharray="50,40" stroke-linecap="round" />
+                    </svg>
+                </div>
+                <!-- perdasterian for after lg -->
+                <div class="absolute inset-0 top-0 left-0 lg:-top-50  pointer-events-none hidden lg:block"
+                    id="pedestarianLgUp">
+
+                </div>
+                <!-- perdasterian for after lg -->
+                <!-- pedesterain path  -->
+
+                <!-- movement plane -->
+                <figure
+                    class="w-[25vw]  absolute  -top-30 lg:top-96 left-1/2 lg:left-0 -translate-x-1/2  duration-200 md:hidden"
+                    id="plane">
+                    <img class="w-full h-full object-cover" src="style/imgs/plane.webp" alt="">
+                </figure>
+
+
+                <!-- movement plane -->
+
+
+
+
+
+                <div class="rotate-z-2  my-30 z-50 lg:absolute  top-0 left-0 lg:top-[2vh] lg:left-[80vw] " id="berlinPart">
+                    <h4 class="font-modak text-[10vw] lg:text-[2vw] text-myBlack lg:text-myRed  uppercase stroke-1  w-full text-center 
+                    lg:after:content-[',,']  lg:after:font-modak ">
+                        berlin
+                    </h4>
+                    <figure class="w-full   row center flex-col  lg:w-2/3">
+                        <img class=" object-cover rounded-2xl " src="style/imgs/goldpart/berlin.webp" alt="">
+                        <figcaption
+                            class="font-Mouse text-[5vw] text-myBlack uppercase flex flex-col justify-center *:text-center mt-4 lg:hidden">
+                            <span>grilled to perfection
+                                juicy</span> <span>, smoky
+                                unforgettable .</span>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div
+                    class=" my-30 z-50 lg:absolute top-0 left-0 lg:top-[40vh] lg:left-[5vw] xl:top-[50vh] xl:left-[12vw] 2xl:top-[70vh]" id="londenPart">
+                    <h4 class="font-modak text-[10vw] lg:text-[2vw] text-myBlack lg:text-myRed  uppercase stroke-1  w-full text-center 
+                    lg:after:content-[',,']  lg:after:font-modak ">
+                        londen
+                    </h4>
+                    <figure class="w-full   row center flex-col z-50 lg:w-1/2">
+                        <img class=" object-cover rounded-2xl z-50" src="style/imgs/goldpart/london.webp" alt="">
+                        <figcaption
+                            class="font-Mouse text-[5vw] text-myBlack uppercase flex flex-col justify-center *:text-center mt-4 lg:hidden">
+                            <span>sun-ripened tomatoes that bring</span>
+                            <span>natural sweetness and balance .</span>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div
+                    class="rotate-z-2 my-30 z-50 lg:absolute top-0 left-0 lg:top-[50vh] lg:left-[40vw] xl:top-[60vh] 2xl:top-[80vh]" id="newYorkPart">
+                    <h4 class="font-modak text-[10vw] lg:text-[2vw] text-myBlack lg:text-myRed  uppercase stroke-1  w-full text-center 
+                    lg:after:content-[',,']  lg:after:font-modak ">new
+                        york
+                    </h4>
+                    <figure class="w-full   row center flex-col lg:w-1/2">
+                        <img class=" object-cover rounded-2xl " src="style/imgs/goldpart/newyork.webp" alt="">
+                        <figcaption
+                            class="font-Mouse text-[5vw] text-myBlack uppercase flex flex-col justify-center *:text-center mt-4 lg:hidden">
+                            <span>righ , creamy cheese that</span>
+                            <span>melts into every bite.</span>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <div
+                    class="-rotate-z-2 my-30 z-50 lg:absolute top-0 left-0 lg:top-[50vh] lg:left-[70vw] xl:top-[65vh] xl:left-[70vw] 2xl:top-[86vh]" id="sydneyPart">
+                    <h4 class="font-modak text-[10vw] lg:text-[2vw] text-myBlack lg:text-myRed  uppercase stroke-1  w-full text-center 
+                    lg:after:content-[',,']  lg:after:font-modak">
+                        sydney
+                    </h4>
+                    <figure class="w-full   row center flex-col lg:w-1/2">
+                        <img class=" object-cover rounded-2xl " src="style/imgs/goldpart/sydney.webp" alt="">
+                        <figcaption
+                            class="font-Mouse text-[5vw] text-myBlack uppercase flex flex-col justify-center *:text-center mt-4 lg:hidden">
+                            <span>grilled to perfection juicy</span>
+                            <span>smokey , inforgettable .</span>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <div
+                    class="rotate-z-2 my-30 z-50 lg:absolute top-0 left-0 lg:top-[80vh] lg:left-[40vw] xl:top-[95vh] xl:left-[45vw] 2xl:top-[120vh] 2xl:left-[50vw]" id="tokyoPart">
+                    <h4 class="font-modak text-[10vw] lg:text-[2vw] text-myBlack lg:text-myRed  uppercase stroke-1  w-full text-center 
+                    lg:after:content-[',,']  lg:after:font-modak">tokyo
+                    </h4>
+                    <figure class="w-full   row center flex-col lg:w-1/2">
+                        <img class=" object-cover rounded-2xl " src="style/imgs/goldpart/tokyo.webp" alt="">
+                        <figcaption
+                            class="font-Mouse text-[5vw] text-myBlack uppercase flex flex-col justify-center *:text-center mt-4 lg:hidden">
+                            <span>soft , toasted buns crafted to hold</span>
+                            <span>everything together .</span>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <!-- start cart part -->
+
+            <div class="w-full absolute bottom-0 left-0 translate-y-[98%]">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <path class="duration-[5s]" fill="#ffd750" fill-opacity="1" id="waveUnderForGoldPartOrAirPlanePart"
+                        d="M0,160L40,160C80,160,160,160,240,176C320,192,400,224,480,224C560,224,640,192,720,181.3C800,171,880,181,960,192C1040,203,1120,213,1200,218.7C1280,224,1360,224,1400,224L1440,224L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z">
+                    </path>
+                </svg>
+            </div>
+
+
+        </section>
+        <!-- a part with gold background that airplane flying  -->
 
     </main>
 
@@ -284,9 +504,13 @@
 
     <script type="module" src="js/logic.js"></script>
     <script type="module" src="js/movePosters.js"></script>
-
+    <script type="module" src="js/moveEyes.js"></script>
     <script src="js/waveAnimation.js"></script>
     <script src="js/hoverForOrderButton.js"></script>
+    <script type="module" src="js/movePlane.js"></script>
+    <script src="js/changeParagraphAndPedestrianPath.js"></script>
+    <script src="js/calculatePedasterianPath.js"></script>
+    <script type="module" src="js/appearenceCartForAirPlanePart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
 </body>
 
