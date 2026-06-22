@@ -125,7 +125,7 @@ if(scroll > 17500) {
     })
 }
 
-if(scroll > 21000) {
+if(scroll > 18000) {
     lastCrav.style.animation = "textEntrance 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) forwards";
 }
 
