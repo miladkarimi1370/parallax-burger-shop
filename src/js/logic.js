@@ -19,6 +19,16 @@ const justCheesBurgerBackground = document.querySelector("#justCheesBurgerBackgr
 const pureQuelity = document.querySelector("#pureQuelity")
 const fourMaterial = document.querySelector("#fourMaterial");
 const goldPartWithAirplane = document.querySelector("#goldPartWithAirplane");
+const feelItTheTitleChangePart = document.querySelector("#feelItTheTitleChangePart");
+const belowMenuPart = document.querySelector("#belowMenuPart");
+const topClassicTitle = document.querySelector("#top-classic-title");
+const juicyCheesyFullyLloaded = document.querySelector("#juicy-cheesy-fully-loaded");
+const subTitleBelowJuicyCheesy = document.querySelector("#subTitleBelowJuicyCheesy");
+const experience = document.querySelector("#experience");
+const foodThatS = document.querySelectorAll(".foodThat");
+const feelTheChangeParagraph = document.querySelectorAll(".feelTheChangeParagraph")
+const lastCrav = document.querySelector("#lastCrav");
+
 
 
 
@@ -54,6 +64,9 @@ requestAnimationFrame(raf);
 lenis.on("scroll", ({ scroll }) => {
 
 
+console.log(scroll);
+
+    
 
 
 
@@ -67,6 +80,12 @@ lenis.on("scroll", ({ scroll }) => {
     claculateSpeedOfScroll(20, scroll, 2, pureQuelity)
     claculateSpeedOfScroll(20, scroll, 1.5, fourMaterial);
     claculateSpeedOfScroll(20, scroll, 2, goldPartWithAirplane);
+    claculateSpeedOfScroll(20 , scroll , 2 , feelItTheTitleChangePart);
+    claculateSpeedOfScroll(20 , scroll , 2 , belowMenuPart);
+
+
+
+
 
     // sticker png functionality //////////////////////
     if (scroll > 2850) {
@@ -82,7 +101,33 @@ lenis.on("scroll", ({ scroll }) => {
     movePlane(scroll);
     // move plane to page ///////////////////////
 
+    if(scroll > 900) {
+        topClassicTitle.classList.add("reveal-text-entrance-for-top-classic");
+    }
+if(scroll > 1000) {
+    juicyCheesyFullyLloaded.classList.add("reveal-text-entrance-for-juicy-cheesy-fully-loaded");
+}
+if(scroll > 1400) {
+    subTitleBelowJuicyCheesy.classList.add("paragraph-leading-reveal")
+}
+if(scroll > 5200) {
+    experience.classList.add("reveal-text");
+    foodThatS.forEach((item , index) => {
+        item.style.animation = "textEntrance 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) "+index * 0.5+"s forwards"
+        
+    })
+}
 
+if(scroll > 17500) {
+    feelTheChangeParagraph.forEach((item , index) => {
+       item.style.animation = "textEntrance 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) "+index * 0.5+"s forwards";
+       
+    })
+}
+
+if(scroll > 21000) {
+    lastCrav.style.animation = "textEntrance 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) forwards";
+}
 
     // appearance Cart For Airplane part
 

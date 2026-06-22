@@ -1,38 +1,58 @@
 import gsap from "https://esm.sh/gsap@3.12.5";
 
 const cities = [
-    { id: "berlinPart",   baseTrigger: 11800 },
-    { id: "londenPart",   baseTrigger: 12200 },
-    { id: "newYorkPart",  baseTrigger: 12800 },
-    { id: "sydneyPart",   baseTrigger: 13200 },
-    { id: "tokyoPart",    baseTrigger: 13600 }
+    { id: "berlinPart",   baseTrigger: 11200 },
+    { id: "londenPart",   baseTrigger: 11600 },
+    { id: "newYorkPart",  baseTrigger: 12000 },
+    { id: "sydneyPart",   baseTrigger: 12400 },
+    { id: "tokyoPart",    baseTrigger: 12800 }
 ];
 
 let cityObjects = [];
+let isDesktop = false;
 
 document.addEventListener("DOMContentLoaded", () => {
     cityObjects = cities.map(city => {
         const el = document.querySelector(`#${city.id}`);
         if (el) {
+            // مقداردهی اولیه
             gsap.set(el, { opacity: 0, y: 60, display: "none" });
         }
         return { ...city, el, shown: false };
     });
+
+    checkScreenSize();
 });
+
+// چک کردن سایز صفحه
+function checkScreenSize() {
+    isDesktop = window.innerWidth >= 1024;
+    
+    if (!isDesktop) {
+        // حالت موبایل/تبلت → همه کارت‌ها بدون انیمیشن نمایش داده شوند
+        cityObjects.forEach(city => {
+            if (city.el) {
+                city.el.style.display = "block";
+                gsap.set(city.el, { opacity: 1, y: 0 });
+                city.shown = true;
+            }
+        });
+    }
+}
 
 export function AppearenceCartForAirPlanePart(scroll) {
     const width = window.innerWidth;
+    isDesktop = width >= 1024;
 
-    // تنظیم trigger بر اساس سایز صفحه
+    // اگر زیر lg بود، هیچ انیمیشنی اجرا نشود
+    if (!isDesktop) return;
+
+    // تنظیم multiplier برای سایزهای بزرگ
     let multiplier = 1;
     if (width >= 1536) {           // 2xl
-        multiplier = 1.2;
+        multiplier = 1.22;
     } else if (width >= 1280) {    // xl
-        multiplier = 1.1;
-    } else if (width >= 1024) {    // lg
-        multiplier = 1;
-    } else {
-        return; // زیر lg انیمیشن اجرا نشود
+        multiplier = 1.12;
     }
 
     cityObjects.forEach((city, index) => {
@@ -67,7 +87,9 @@ export function AppearenceCartForAirPlanePart(scroll) {
 
 // بروزرسانی هنگام تغییر سایز صفحه
 window.addEventListener('resize', () => {
-    // reset shown states وقتی سایز تغییر کرد
+    checkScreenSize();
+    
+    // reset وضعیت انیمیشن برای حالت دسکتاپ
     cityObjects.forEach(city => {
         if (city.el) city.shown = false;
     });

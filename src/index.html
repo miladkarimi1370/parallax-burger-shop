@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Burger Project</title>
-
+    <link rel="icon" type="image/x-icon" href="style/imgs/favicon-32x32.png">
     <link rel="stylesheet" href="style/output.css">
 </head>
 
-<body class="min-h-[3000vh] bg-beige">
+<body
+    class="min-h-[2100vh] sm:min-h-[2200vh] md:min-h-[2840vh] lg:min-h-[2000vh] xl:min-h-[2150vh] 2xl:min-h-[2610vh] bg-beige">
     <main class="bg-beige w-full">
         <!-- header menu -->
         <section
@@ -51,7 +52,7 @@
             class="w-full  mt-20 lg:mt-15 xl:mt-0 translate-y-15  xl:translate-y-0  pointer-events-none row center  fixed "
             id="theBurgerTitle">
             <div
-                class=" *:font-Mouse *:uppercase flex justify-center items-center lg:items-start gap-x-5 w-23/24 lg:w-21/24">
+                class=" *:font-Mouse *:uppercase flex justify-center items-center lg:items-start gap-x-5 w-23/24 lg:w-21/24 reveal-text">
                 <div class="relative w-full ">
                     <h3 class=" text-[30vw]  text-myRed  text-stroke-light  font-extralight">the</h3>
                     <h6
@@ -68,10 +69,9 @@
             </div>
 
             <figure class="w-10/12 lg:w-5/12  lg:absolute lg:top-1/2 xl:top-1/6 left-1/2 lg:-translate-x-1/2">
-                <img src="style/imgs/burgerH.webp"
-                    class="w-full h-full object-cover animate-[upAndDownHamburger_3s_ease-in-out_infinite_alternate]"
+                <img src="style/imgs/burgerH.webp" id="hambergurTitle" class=" object-cover profile-image-hamburger"
                     alt="">
-                <figcaption class="hidden lg:block w-full  italic  text-mustard-dark font-modak text-[28vw] lg:text-[15vw] z-50 text-center  text-stroke-light tracking-wide lg:tracking-wide leading-5 md:leading-10 lg:leading-20 
+                <figcaption class=" hidden lg:block w-full  italic  text-mustard-dark font-modak text-[28vw] lg:text-[15vw] z-50 text-center  text-stroke-light tracking-wide lg:tracking-wide leading-5 md:leading-10 lg:leading-20 
                 lg:absolute 
                 ">
                     crav
@@ -101,15 +101,16 @@
 
         <!-- the part of top classic -->
         <section class="w-full   fixed mt-280 md:mt-380 lg:mt-300 *:text-center row center " id="top-classic">
-            <h5
-                class="font-modak text-[10vw] lg:text-[5vw] text-myRed text-stroke-lightest tracking-tighter  w-full lg:-rotate-6">
+            <h5 class="font-modak text-[10vw] lg:text-[5vw] text-myRed text-stroke-lightest tracking-tighter  w-full lg:-rotate-6 "
+                style="transform: scale(0);" id="top-classic-title">
                 top classic</h5>
-            <h3
-                class="w-full lg:w-6/12  md:leading-44  font-Mouse uppercase text-[26vw] md:text-[22vw] lg:text-[12vw]  text-myRed text-stroke-light  leading-30 ">
+            <h3 class="w-full lg:w-6/12  md:leading-44  font-Mouse uppercase text-[26vw] md:text-[22vw] lg:text-[12vw]  text-myRed text-stroke-light  leading-30 "
+                style="transform: scale(0);" id="juicy-cheesy-fully-loaded">
                 juicy cheesy fully loaded</h3>
             <p
                 class="font-Mouse text-[5vw] lg:text-[3vw] mt-8 w-10/12  text-center md:leading-tight lg:row  lg:flex lg:justify-center">
-                <span class="lg:w-6/12 flex text-center lg:text-[2vw]">Crav is back and bolder than ever . honoring our
+                <span class="lg:w-6/12 flex text-center lg:text-[2vw]" id="subTitleBelowJuicyCheesy">Crav is back and
+                    bolder than ever . honoring our
                     rich roots . we bring you the ultimate smashed
                     experience fully loaded . and crafted fresh .</span>
             </p>
@@ -168,15 +169,19 @@
                 </svg>
             </div>
             <div class="w-full relative">
-                <h5 class="font-modak text-[8vw] text-myRed text-stroke-light uppercase w-full  text-center mt-20">
+                <h5 class="font-modak text-[8vw] text-myRed text-stroke-light uppercase w-full  text-center mt-20" id="experience" style="transform: scale(0);">
                     experience</h5>
-                <h3
-                    class=" *:font-Mouse *:uppercase *:text-beige *:text-[25vw] *:lg:text-[16vw] *:lg:flex *:lg:flex-col **:mx-2.5 row center *:leading-24 *:md:leading-44 *:lg:leading-42 *:xl:leading-50 *:2xl:leading-58">
-                    <div class="">
-                        <span>food</span><span>that</span>
+                <h3 class=" *:font-Mouse
+                     *:uppercase *:text-beige *:text-[25vw] *:lg:text-[16vw] *:lg:flex *:lg:flex-col
+                      **:mx-2.5 row center *:leading-24 *:md:leading-44 *:lg:leading-42 *:xl:leading-50 *:2xl:leading-58
+                      ">
+                    <div >
+                        <span  class="foodThat" style="transform: scale(0);">food</span >
+                            <span class="foodThat" style="transform: scale(0);">that</span>
                     </div>
-                    <div class="">
-                        <span>feels</span><span>good</span>
+                    <div>
+                        <span class="foodThat"  style="transform: scale(0);">feels</span>
+                        <span class="foodThat" style="transform: scale(0);">good</span>
                     </div>
 
                 </h3>
@@ -297,7 +302,7 @@
             id="pureQuelity">
             <!-- wave part -->
             <div
-                class="w-full absolute top-0 left-0 translate-y-[-98%] md:translate-y-[-130%] lg:translate-y-[-240%] xl:translate-y-[-95%]">
+                class="w-full absolute top-0 left-0 translate-y-[-98%] md:translate-y-[-130%] lg:translate-y-[-240%] xl:translate-y-[-90%]">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                     <path class="duration-[5s]" fill="#f5e3cd" fill-opacity="1" id="waveAbovePureQuality"
                         d="M0,0L40,26.7C80,53,160,107,240,122.7C320,139,400,117,480,122.7C560,128,640,160,720,144C800,128,880,64,960,53.3C1040,43,1120,85,1200,112C1280,139,1360,149,1400,154.7L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z">
@@ -309,7 +314,10 @@
                 class="font-modak text-myRed text-stroke-lightest  text-[8vw] lg:text-[5vw] uppercase  w-full text-center row center mt-10">
                 pure quality</h5>
             <div
-                class="font-Mouse text-myRed text-stroke-light  text-[25vw] lg:text-[18vw] xl:text-[15vw] w-full lg:w-10/12 lg:mx-auto *:text-center uppercase flex justify-center flex-col items-center  leading-26 md:leading-42 xl:leading-52 2xl:leading-62 relative">
+                class="font-Mouse text-myRed text-stroke-light  text-[25vw] lg:text-[18vw] xl:text-[15vw] w-full lg:w-10/12 lg:mx-auto 
+                *:text-center uppercase flex justify-center flex-col items-center  leading-26 md:leading-42 xl:leading-52 2xl:leading-62 relative"
+        
+                >
                 <span>every layer</span>
                 <span>picked with</span>
                 <span>signature</span>
@@ -339,7 +347,7 @@
         <!-- four material lettuce tomato cheese meat part -->
 
         <!-- a part with gold background that airplane flying  -->
-        <section class="bg-mustard w-full min-h-96 fixed mt-1100 md:mt-1480 lg:mt-1540 xl:mt-1630 2xl:mt-1950 z-50"
+        <section class="bg-mustard w-full  fixed mt-1100 md:mt-1480 lg:mt-1540 xl:mt-1630 2xl:mt-1950 z-50"
             id="goldPartWithAirplane">
             <div class="w-full absolute top-0 left-0 translate-y-[-98%]">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -378,9 +386,8 @@
                 <!-- pedesterain path  -->
 
                 <!-- movement plane -->
-                <figure
-                    class="w-[25vw]  absolute  -top-30 lg:top-96 left-1/2 lg:left-0 -translate-x-1/2  duration-200 md:hidden"
-                    id="plane">
+                <figure class=" w-[25vw] lg:w-[12vw] xl:w-[15vw] 2xl:w-[10vw]  absolute  -top-30  left-1/2 -translate-x-1/2 duration-200 md:hidden lg:block
+                     lg:absolute lg:top-[-22vh] lg:left-[36vw] lg:translate-x-0  lg:rotate-z-[-80deg] " id="plane">
                     <img class="w-full h-full object-cover" src="style/imgs/plane.webp" alt="">
                 </figure>
 
@@ -391,7 +398,8 @@
 
 
 
-                <div class="rotate-z-2  my-30 z-50 lg:absolute  top-0 left-0 lg:top-[2vh] lg:left-[80vw] " id="berlinPart">
+                <div class="rotate-z-2  my-30 z-50 lg:absolute  top-0 left-0 lg:top-[2vh] lg:left-[80vw] "
+                    id="berlinPart">
                     <h4 class="font-modak text-[10vw] lg:text-[2vw] text-myBlack lg:text-myRed  uppercase stroke-1  w-full text-center 
                     lg:after:content-[',,']  lg:after:font-modak ">
                         berlin
@@ -406,8 +414,8 @@
                         </figcaption>
                     </figure>
                 </div>
-                <div
-                    class=" my-30 z-50 lg:absolute top-0 left-0 lg:top-[40vh] lg:left-[5vw] xl:top-[50vh] xl:left-[12vw] 2xl:top-[70vh]" id="londenPart">
+                <div class=" my-30 z-50 lg:absolute top-0 left-0 lg:top-[40vh] lg:left-[5vw] xl:top-[50vh] xl:left-[12vw] 2xl:top-[70vh]"
+                    id="londenPart">
                     <h4 class="font-modak text-[10vw] lg:text-[2vw] text-myBlack lg:text-myRed  uppercase stroke-1  w-full text-center 
                     lg:after:content-[',,']  lg:after:font-modak ">
                         londen
@@ -421,8 +429,8 @@
                         </figcaption>
                     </figure>
                 </div>
-                <div
-                    class="rotate-z-2 my-30 z-50 lg:absolute top-0 left-0 lg:top-[50vh] lg:left-[40vw] xl:top-[60vh] 2xl:top-[80vh]" id="newYorkPart">
+                <div class="rotate-z-2 my-30 z-50 lg:absolute top-0 left-0 lg:top-[50vh] lg:left-[40vw] xl:top-[60vh] 2xl:top-[80vh]"
+                    id="newYorkPart">
                     <h4 class="font-modak text-[10vw] lg:text-[2vw] text-myBlack lg:text-myRed  uppercase stroke-1  w-full text-center 
                     lg:after:content-[',,']  lg:after:font-modak ">new
                         york
@@ -437,8 +445,8 @@
                     </figure>
                 </div>
 
-                <div
-                    class="-rotate-z-2 my-30 z-50 lg:absolute top-0 left-0 lg:top-[50vh] lg:left-[70vw] xl:top-[65vh] xl:left-[70vw] 2xl:top-[86vh]" id="sydneyPart">
+                <div class="-rotate-z-2 my-30 z-50 lg:absolute top-0 left-0 lg:top-[50vh] lg:left-[70vw] xl:top-[65vh] xl:left-[70vw] 2xl:top-[86vh]"
+                    id="sydneyPart">
                     <h4 class="font-modak text-[10vw] lg:text-[2vw] text-myBlack lg:text-myRed  uppercase stroke-1  w-full text-center 
                     lg:after:content-[',,']  lg:after:font-modak">
                         sydney
@@ -453,8 +461,8 @@
                     </figure>
                 </div>
 
-                <div
-                    class="rotate-z-2 my-30 z-50 lg:absolute top-0 left-0 lg:top-[80vh] lg:left-[40vw] xl:top-[95vh] xl:left-[45vw] 2xl:top-[120vh] 2xl:left-[50vw]" id="tokyoPart">
+                <div class="rotate-z-2 my-30 z-50 lg:absolute top-0 left-0 lg:top-[80vh] lg:left-[40vw] xl:top-[95vh] xl:left-[45vw] 2xl:top-[120vh] 2xl:left-[50vw]"
+                    id="tokyoPart">
                     <h4 class="font-modak text-[10vw] lg:text-[2vw] text-myBlack lg:text-myRed  uppercase stroke-1  w-full text-center 
                     lg:after:content-[',,']  lg:after:font-modak">tokyo
                     </h4>
@@ -481,6 +489,106 @@
 
         </section>
         <!-- a part with gold background that airplane flying  -->
+        <!-- feel it the title change part -->
+        <section
+            class=" w-full  fixed  mt-2080 md:mt-2700 lg:mt-1990 xl:mt-2050 2xl:mt-2450  lg:flex lg:justify-between items-stretch"
+            id="feelItTheTitleChangePart">
+            <div class="w-full ">
+                <h4
+                    class="font-modak text-[8vw] text-myRed   text-center uppercase lg:text-[3vw] lg:-rotate-z-12 lg:justify-self-start  lg:px-8">
+                    feel it</h4>
+                <h2 class="w-full text-center font-Mouse text-myRed text-[23vw] lg:text-[15vw] uppercase flex flex-col leading-24 md:leading-40 lg:leading-35 xl:leading-44 2xl:leading-56 lg:text-start 
+                    text-stroke-light
+                    lg:px-8 my-5">
+                    <span class="feelTheChangeParagraph" style="transform: scale(0);">feel the </span ><span class="feelTheChangeParagraph" style="transform: scale(0);">change</span>
+                </h2>
+                <p
+                    class="font-Mouse text-center text-myBlack capitalize flex flex-col justify-center text-[5vw] lg:text-[2vw] lg:leading-8 xl:leading-10 2xl:leading-12 lg:text-start lg:px-8">
+                    <span>smashed for the bold . build for the hungry . dive into a </span>
+                    <span>legendary craft experience where every crispy edge and</span>
+                    <span>juicy layer rules .</span>
+                </p>
+                <a class="relative w-fit  mx-auto lg:mx-8 border-none mt-10  p-0 block cursor-pointer outline-none select-none "
+                    data-anm-btn="btn" data-wf--btn-blob--variant="secondary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="-10 -10 602 475"
+                        preserveAspectRatio="none" data-anm-btn="svg"
+                        class="absolute inset-0 w-full h-full z-0 pointer-events-none">
+                        <path stroke="#ffffff" stroke-width="10" fill="#F91914"
+                            d="M310.777 0.20434C424.154 2.91791 540.733 50.9739 574.176 159.34C606.479 264.014 533.962 365.999 442.064 425.623C364.995 475.626 270.863 455.893 193.524 406.309C93.8313 342.395 -27.3608 259.503 5.48889 145.729C40.0621 25.9857 186.179 -2.77783 310.777 0.20434Z"
+                            data-anm-btn="path" class="transition-[fill] duration-200"
+                            data-original="M310.777 0.20434C424.154 2.91791 540.733 50.9739 574.176 159.34C606.479 264.014 533.962 365.999 442.064 425.623C364.995 475.626 270.863 455.893 193.524 406.309C93.8313 342.395 -27.3608 259.503 5.48889 145.729C40.0621 25.9857 186.179 -2.77783 310.777 0.20434Z">
+                        </path>
+                    </svg>
+                    <span data-anm-btn="text"
+                        class="font-Mouse relative z-10 text-white font-bold text-[5vw] lg:text-[2vw] uppercase inline-block px-[4vw] py-[1.5vw] max-md:px-[10vw] max-md:py-[4vw] "
+                        aria-hidden="false">Order Now</span>
+                </a>
+            </div>
+            <div class="w-full relative ">
+                <figure
+                    class="sticker-wrapper absolute top-0 -translate-y-1/2 lg:top-[80vh] left-1/10 lg:left-[-20vw] w-[35vw]  h-[35vw]  -rotate-z-12">
+                    <div class="wrapper">
+                        <span class="sticker">
+                            <span class="front">
+                                <img src="style/imgs/burger-boy.png" class=" h-full  object-cover" alt="">
+                            </span>
+                            <span class="back"></span>
+                        </span>
+
+                    </div>
+
+                </figure>
+                <figure class="mt-20  w-full row center">
+                    <img src="style/imgs/cta.webp" class="w-11/12  rounded-4xl lg:self-start" alt="">
+                </figure>
+            </div>
+        </section>
+        <!-- feel it the title change part -->
+        <!-- below menu part -->
+        <section class="w-full  fixed mt-2380 sm:mt-2460 md:mt-3150 lg:mt-2170 xl:mt-2270 2xl:mt-2750"
+            id="belowMenuPart">
+            <nav class="w-full ">
+                <ul
+                    class="w-full  row center lg:justify-start gap-10 lg:px-8 **:text-myBlack **:font-Mouse **:text-[5vw] **:lg:text-[2vw] **:uppercase **:hover:text-myRed **:duration-200">
+                    <li class=""><a href="#" class="">home</a></li>
+                    <li><a href="#">burgers</a></li>
+                    <li><a href="#">spices</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+            </nav>
+            <h2 class="w-full  text-[36vw] font-modak text-stroke-lightest uppercase text-center text-myRed ">
+                <span class="w-23/24  inline-block mx-auto border-b-[1px] border-stone-950/30" id="lastCrav" style="transform: scale(0);">crav</span>
+            </h2>
+            <div class=" uppercase text-center w-full flex justify-center items-center  *:inline-block mt-10">
+                <p class="w-10/12  *:text-myBlack *:text-[5vw] *:font-Mouse flex flex-col *:inline-block">
+
+                    <span>smashed petties . toasted buns . est . 1997</span>
+                    <span>2026 crav ------ all rights reserved</span>
+                </p>
+
+            </div>
+            <div class="relative *:w-[15vw] *:h-[15vw] *:md:w-[10vw] *:md:h-[10vw]">
+
+
+                <figure class="absolute w-[15vw] h-[15vw] top-[20vh] left-[1vw] fruit-1  *:w-full *:h-full">
+                    <img src="style/imgs/tomato.webp" alt="">
+                </figure>
+                <figure class="absolute w-[15vw] h-[15vw] *:w-full *:h-full  fruit-2">
+                    <img src="style/imgs/meat.webp" alt="">
+                </figure>
+                <figure class="absolute w-[15vw] h-[15vw] *:w-full *:h-full fruit-3">
+                    <img src="style/imgs/lettuce.webp" alt="">
+                </figure>
+                <figure class="absolute w-[15vw] h-[15vw] *:w-full *:h-full  fruit-4">
+                    <img src="style/imgs/cheese-logo.webp" alt="">
+                </figure>
+            </div>
+        </section>
+
+
+        <!-- below menu part -->
+
+
 
     </main>
 
@@ -511,7 +619,9 @@
     <script src="js/changeParagraphAndPedestrianPath.js"></script>
     <script src="js/calculatePedasterianPath.js"></script>
     <script type="module" src="js/appearenceCartForAirPlanePart.js"></script>
+    <script src="js/executeAnimation.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+
 </body>
 
 </html>
