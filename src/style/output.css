@@ -330,12 +330,6 @@
   .z-60 {
     z-index: 60;
   }
-  .z-\[1000\] {
-    z-index: 1000;
-  }
-  .z-\[9999\] {
-    z-index: 9999;
-  }
   .mx-auto {
     margin-inline: auto;
   }
@@ -412,14 +406,8 @@
   .h-24 {
     height: calc(var(--spacing) * 24);
   }
-  .h-\[1vw\] {
-    height: 1vw;
-  }
   .h-\[7vw\] {
     height: 7vw;
-  }
-  .h-\[10vw\] {
-    height: 10vw;
   }
   .h-\[15vw\] {
     height: 15vw;
@@ -429,9 +417,6 @@
   }
   .h-\[40vh\] {
     height: 40vh;
-  }
-  .h-\[80px\] {
-    height: 80px;
   }
   .h-auto {
     height: auto;
@@ -472,9 +457,6 @@
   .w-23\/24 {
     width: calc(23 / 24 * 100%);
   }
-  .w-\[1vw\] {
-    width: 1vw;
-  }
   .w-\[4vw\] {
     width: 4vw;
   }
@@ -498,9 +480,6 @@
   }
   .w-\[35vw\] {
     width: 35vw;
-  }
-  .w-\[80px\] {
-    width: 80px;
   }
   .w-fit {
     width: fit-content;
@@ -631,9 +610,6 @@
   .rounded-4xl {
     border-radius: var(--radius-4xl);
   }
-  .rounded-full {
-    border-radius: calc(infinity * 1px);
-  }
   .rounded-t-\[50\%\] {
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
@@ -654,10 +630,6 @@
     border-style: var(--tw-border-style);
     border-width: 2px;
   }
-  .border-\[1px\] {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
-  }
   .border-b-\[1px\] {
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 1px;
@@ -668,9 +640,6 @@
   }
   .border-gray-400 {
     border-color: var(--color-gray-400);
-  }
-  .border-myBlack {
-    border-color: var(--color-myBlack);
   }
   .border-myRed {
     border-color: var(--color-myRed);
@@ -698,9 +667,6 @@
   }
   .bg-myWhite {
     background-color: var(--color-myWhite);
-  }
-  .bg-white {
-    background-color: var(--color-white);
   }
   .bg-cover {
     background-size: cover;
@@ -859,9 +825,6 @@
   }
   .underline {
     text-decoration-line: underline;
-  }
-  .mix-blend-difference {
-    mix-blend-mode: difference;
   }
   .outline {
     outline-style: var(--tw-outline-style);
@@ -1140,6 +1103,12 @@
     @media (width >= 40rem) {
       font-size: var(--text-6xl);
       line-height: var(--tw-leading, var(--text-6xl--line-height));
+    }
+  }
+  .sm\:text-xl {
+    @media (width >= 40rem) {
+      font-size: var(--text-xl);
+      line-height: var(--tw-leading, var(--text-xl--line-height));
     }
   }
   .\*\:sm\:px-8 {
